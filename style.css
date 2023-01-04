@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-size: 24px;
 }
 
 body{
@@ -8,6 +9,12 @@ body{
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Rubik Bubbles', cursive;
+     /* img source unsplash.com artist hin-bong-yeung */
+     background-image: url(./images/hin-bong-yeung-jF946mh5QrA-unsplash.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     object-fit: contain;
 }
 
 /* header */
@@ -15,19 +22,74 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2em;
-    background-color: #fdb44b;
+    padding: 2rem;
 }
 
 header h1{
-    padding: 1em;
+    font-size: 1.5rem;
+    padding: 2rem;
     letter-spacing: .10em;
+    text-shadow: 2px 4px 4px rgba(143, 32, 32,.5);
+}
+
+/* divs styling */
+.divs{
+
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    /* color: white; */
+    border: solid 1px #000;
+}
+
+/* links */
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    color: #fdb44b;
+    cursor: cell ;
 }
 
 /* footer */
 footer{
     margin-top: auto;
-    padding: 2em;
-    text-align: center;
-    background-color: #00bbf0;
+    padding: 2rem;
+    font-style: 1.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 800) {
+    header h1{
+        font-size: 1.5rem;
+    }
+    .ft-one p,.ft-two p,.ft-one a,.ft-two a {
+        font-size: .9rem;
+    }
+    footer{
+        gap: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+     header h1{
+        font-size: 1rem;
+     }
+     header h1{
+        padding: 1em 0;
+        width: 100%;
+     }
+    footer{
+        gap: 1.5em;
+    }
+    .ft-one p,.ft-two p,.ft-one a,.ft-two a {
+        font-size: .6rem;
+    }
 }
