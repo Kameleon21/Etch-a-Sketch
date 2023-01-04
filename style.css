@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Rubik Bubbles', cursive;
+}
+
+/* header */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: #fdb44b;
+}
+
+header h1{
+    padding: 1em;
+    letter-spacing: .10em;
+}
+
+/* footer */
+footer{
+    margin-top: auto;
+    padding: 2em;
+    text-align: center;
+    background-color: #00bbf0;
+}
