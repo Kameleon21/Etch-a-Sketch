@@ -36,24 +36,35 @@ header h1{
 #container{
     margin:auto;
     display: grid;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
 }
 
 .row{
     background-color: #fff;
-    border: solid 0.2px #000;
+    border: solid 1px #000;
 }
 
-.inline{
-    background-color: grey;
-    height: 5px;
-    width: 5px;
-    margin: auto;
+/* btn-container */
+
+#btn-contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
 }
 
-.colour {
-    background-color: #7A1699;
+button{
+    border-color: rgba(173, 32, 63, 0.7);
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: rgba(173, 32, 63, 0.7);
+    transition: 5ms;
+}
+
+button:hover{
+    transform: scale(1.2);
 }
 
 /* links */
@@ -78,7 +89,7 @@ footer{
 }
 
 /* responsiveness */
-@media only screen and (max-width: 900) {
+@media only screen and (max-width: 900px) {
     header h1{
         font-size: 1.5rem;
     }
@@ -93,9 +104,13 @@ footer{
 @media only screen and (max-width: 500px) {
      header h1{
         font-size: 1rem;
-        padding: 1em 0;
-
      }
+     #container{
+        margin-top: 5em;
+        width: 200px;
+        height: 200px;
+     }
+
     footer{
         gap: 1.5em;
     }

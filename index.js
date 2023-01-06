@@ -1,12 +1,12 @@
 const main = document.getElementById('container');
-let divNumber = 10;
+let divNumber = 20
 function addDives(divNumber) {
     for(let i=0;i<divNumber;i++) {
         for(let x=divNumber;x>0;x--){
             let col = document.createElement('div');
             col.classList.add('row');
-            col.style.width = `500/${divNumber}px`
-            col.style.height = `500/${divNumber}px`
+            col.style.width = `400/${divNumber}px`
+            col.style.height = `400/${divNumber}px`
             main.style.gridTemplateColumns = `repeat(${divNumber},1fr) `;
             main.style.gridTemplateRows= `repeat(${divNumber},1fr) `;
             main.append(col);
@@ -21,6 +21,7 @@ function addDives(divNumber) {
 const randColor = () =>  {
     return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
 }
+
 
 addDives(divNumber);
 
