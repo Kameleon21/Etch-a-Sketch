@@ -40,7 +40,7 @@ header h1{
     height: 400px;
 }
 
-.row{
+#row{
     background-color: #fff;
     border: solid 1px #000;
 }
