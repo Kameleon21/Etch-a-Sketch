@@ -1,11 +1,6 @@
 const main = document.getElementById('container');
-// const firstBtn = document.getElementById('btnOne');
-// const secondBtn = document.getElementById('btnTwo');
-// const thirdBtn = document.getElementById('btnThree');
-// const clearBtn = document.getElementById('clear');
-const allBtn = document.querySelectorAll('button');
-
-let divNumber=10;
+const clear =document.getElementById('clear');
+let divNumber=5;
 
 function addDives(divNumber) {
     for(let i=0;i<divNumber;i++) {
@@ -23,6 +18,11 @@ function addDives(divNumber) {
         }
     }
 }
+// creates a new grid with new dimensions
+function createGrid(value) {
+    clearGrid()
+    addDives(value);
+}
 
 // clears the cols
 function clearGrid() {
@@ -36,28 +36,9 @@ const randColor = () =>  {
     return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
 }
 
-
-allBtn.forEach(allBtn => {
-    allBtn.addEventListener('click', (e) => {
-        if(e.target.id == "btnOne"){
-            clearGrid();
-           divNumber=16
-           addDives(divNumber);
-        } else if(e.target.id == "btnTwo"){
-            clearGrid();
-            divNumber=32;
-            addDives(divNumber);
-        } else if(e.target.id == "btnThree"){
-            clearGrid();
-            divNumber=64;
-            addDives(divNumber);
-        } else if(e.target.id == "clear"){
-            divNumber =10
-            clearGrid()
-            addDives(divNumber);
-        }
-    })
-})
+clear.addEventListener('click', () => {
+    createGrid(5);
+});
 
 
 

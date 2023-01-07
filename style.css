@@ -51,6 +51,7 @@ header h1{
     display: flex;
     justify-content: center;
     align-items: center;
+
     gap: 1.5em;
 }
 
@@ -67,8 +68,46 @@ button:hover{
     transform: scale(1.2);
 }
 
+/* Styling for the slider range and div */
+.slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+}
+
+.slider label,.slider p{
+    font-size: 16px;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    background: rgb(173, 32, 63);
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin-top: -4px;
+}
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+}
+
 /* links */
-a{
+a{          
     text-decoration: none;
     color: #000;
 }
@@ -103,12 +142,18 @@ footer{
 
 @media only screen and (max-width: 500px) {
      header h1{
-        font-size: 1rem;
+        font-size: 1.2rem;
+        flex-shrink: 0;
      }
      #container{
-        margin-top: 5em;
-        width: 200px;
-        height: 200px;
+        margin-top: 2.5em;
+        width: 300px;
+        height: 300px;
+     }
+     button{
+        font-size: 12px;
+        padding: 3px;
+        border-radius: 5px;
      }
 
     footer{
