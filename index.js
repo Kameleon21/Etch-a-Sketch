@@ -1,5 +1,6 @@
 const main = document.getElementById('container');
 const clear =document.getElementById('clear');
+const slider = document.querySelector('input');
 let divNumber=5;
 
 function addDives(divNumber) {
@@ -37,7 +38,7 @@ const randColor = () =>  {
 }
 
 clear.addEventListener('click', () => {
-    createGrid(5);
+    createGrid(slider.value);
 });
 
 
