@@ -5,7 +5,7 @@
 
 This project was made using HTML,CSS and JavaScript
 
-In this project I was wanted to show how manipuluating the DOM can create a fun project that is appealing to the eye.
+In this project I was wanted to show how manipulating the DOM can create a fun project that is appealing to the eye.
 
 Some of the challenges that I have faced when creating this project was finding out how to create a responsive grid that is 
 able to change depending on the users choice. 
